@@ -41,7 +41,7 @@ const App = () => {
   const ifDraw = array.every((value) => value != null);
 
   return (
-    <div>
+    <div className="container">
       <h1>Tic Tac Toe</h1>
       <div className="column">
         <div className="row" onClick={() => handleSubmit(0)}>
@@ -79,7 +79,10 @@ const App = () => {
       {isWinner !== null ? (
         <>
           <h3>{isWinner} is the winner</h3>
-          <button onClick={() => setArray(Array(9).fill(null))}>
+          <button
+            className="play-again"
+            onClick={() => setArray(Array(9).fill(null))}
+          >
             Play Again
           </button>
         </>
